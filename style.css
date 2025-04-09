@@ -1,0 +1,191 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap'); */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* text-align: center;   */
+    font-family: 'Baloo Bhai 2', sans-serif;
+    /* counter-reset: section; */
+}
+
+/* Header */
+header {
+    background-color: rgb(44, 44, 118);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    top: 0;
+}
+
+.logo {
+    padding-left: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+nav li {
+    padding-left: 20px;
+
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav li a:hover {
+    color: skyblue;
+}
+
+
+@media(max-width:768px) {
+    header {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+/* main content */
+.main-container {
+    margin-top: 80px;
+    display: grid;
+    /* grid-area: auto; */
+    gap: 20px;
+    justify-content: center;
+}
+
+.intro {
+    padding: 20px;
+}
+
+.intro h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(54, 78, 123);
+    font-size: xx-large;
+}
+
+.intro span {
+    background-color: rgb(44, 44, 118);
+    color: white;
+    padding: 3px 50px;
+
+}
+
+.intro p {
+    width: 50%;
+    text-wrap: wrap;
+    display: inline;
+}
+
+/* Articles */
+.article-list {
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    gap: 20px;
+}
+
+
+.article-list div {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    list-style-position: inside;
+
+}
+
+.article-list li::before {
+    counter-increment: section;
+    content: counter(section)". ";
+}
+
+.article-list h5 {
+    text-align: left;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+    .main-container {
+        margin-top: 130px;
+    }
+
+    .article-list {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article-list div {
+        width: 80%;
+        max-width:700px;
+    }
+}
+
+
+
+section h3 {
+    background-color: rgb(44, 44, 118);
+    color: white;
+}
+
+dl dt {
+    font-weight: bold;
+}
+
+/* Conference schedule */
+table {
+    justify-self: center;
+    width: 50%;
+}
+
+table h3 {
+    background-color: rgb(44, 44, 118);
+}
+
+table,
+tr,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+footer {
+    bottom: 0;
+    background-color: rgb(10, 10, 62);
+    color: white;
+}
+
+
+footer h4 {
+    margin-bottom: 0;
+}
+
+footer p {
+    margin-top: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+
+}
+
+footer a:hover {
+    color: rgb(88, 145, 180);
+
+}
